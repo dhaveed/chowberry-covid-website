@@ -12,6 +12,7 @@
     <title>Chowberry - COVID-19 Relief Efforts</title>
     <!-- styles-->
     <link rel="stylesheet" href="css/styles.min.css" />
+    <link rel="stylesheet" href="./css/extension.css">
     <!-- web-font loader-->
     <script>
         WebFontConfig = {
@@ -430,6 +431,7 @@
                 transform: translateY(35px) scale(0.97, 0.97);
             }
         }
+        
     </style>
 </head>
 
@@ -589,6 +591,7 @@
                             <p>Consequently, we are coordinating a humanitarian response to provide much needed food and nutrition supplies to vulnerable groups during this trying times by crowdsourcing food through donations both monetary and in-kind.
                             </p>
                             <p class="ps">** For clarifications and enquiries call <strong><a href="tel:09082721035">0908 272 1035</a></strong> or send us an email <strong><a href="mailto: covid19@chowberry.com "> covid19@chowberry.com </a></strong></p>
+                            <p class="ps">** Donations of <strong>Personal Protective Equipment (PPE)</strong> are also welcome.</p>
                             <!-- <a class="button button--primary open" href="#">Donate Now</a> -->
                         </div>
                         <div class="col-lg-6 col-xl-5 offset-xl-1">
@@ -774,8 +777,33 @@
                                         </div>
                                     </div>
                                     <div class="donors-slider__item">
-                                        <div class="donors-slider__img"><img src="img/donor_2.png" alt="donor" /></div>
+                                        <div class="donors-slider__img">
+                                            <!-- <img src="img/donor_2.png" alt="donor" /> -->
+                                            <img src="./img/cberry/ej-logo.jpg" alt="donor" />
+                                        </div>
                                     </div>
+
+                                    <!-- <div class="wrapper" style="margin-left: -100px;">
+                                        <div class="col_third">
+                                          <div class="hover panel">
+                                            <div class="front">
+                                              <div class="box1">
+                                                <div class="donors-slider__item">
+                                                    <div class="donors-slider__img">
+                                                        <!-- <img src="img/donor_2.png" alt="donor" /> ->
+                                                        <img src="./img/cberry/ej-logo.jpg" alt="donor" />
+                                                    </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="back">
+                                              <div class="box2">
+                                                <p>Back Side</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          </div>
+                                       </div> -->
                                 </div>
                             </div>
                             <!-- donors slider end-->
@@ -942,7 +970,18 @@
                 $(this).addClass("main-menu__item--active").siblings().removeClass("main-menu__item--active");
             });
 
+            $('.hover').hover(function(){
+            $(this).addClass('flip');
+        },function(){
+            $(this).removeClass('flip');
         });
+
+        });
+
+
+        // $(document).ready(function(){
+            
+        // });
     </script>
 
     <div style="display: none">
