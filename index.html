@@ -77,7 +77,7 @@
             right: 0;
             bottom: 0;
             margin: auto;
-            background-color: #fff;
+            background-color: #000;
             opacity: 0;
             visibility: hidden;
             z-index: 40;
@@ -130,7 +130,7 @@
         }
         
         .modal-frame.state-appear, .modal-frame-volunteer.state-appear {
-            visibility: visible;
+            /* visibility: visible; */
         }
         
         .modal-frame.state-appear .modal-inset, .modal-frame-volunteer.state-appear .modal-inset {
@@ -150,7 +150,7 @@
         }
         
         .modal-frame.state-leave, .modal-frame-volunteer.state-leave {
-            visibility: visible;
+            /* visibility: visible; */
         }
         
         .modal-frame.state-leave .modal-inset, .modal-frame-volunteer.state-leave .modal-inset {
@@ -516,7 +516,8 @@
                             <div class="dropdown-trigger__item" style="display: none;"></div>
                         </div>
                         <!-- <a class="button button--squared open" href="https://dashboard.flutterwave.com/donate/djaugnset2hk" target="_blank"><span>Donate</span></a> -->
-                        <a class="button button--squared" href="https://dashboard.flutterwave.com/donate/djaugnset2hk" target="_blank"><span>Donate</span></a>
+                        <!-- <a class="button button--squared" href="https://dashboard.flutterwave.com/donate/djaugnset2hk" target="_blank"><span>Donate</span></a> -->
+                        <a class="button button--squared open" href="#"><span>Donate</span></a>
                     </div>
                 </div>
             </div>
@@ -544,8 +545,8 @@
                                                     With so much uncertainty and concern surrounding the recent novel coronavirus, it’s easy to feel helpless — but there is something we can all do to help the fight against it.</p>
                                             </div>
                                             <div class="promo-slider__wrapper-3">
-                                                <!-- <a class="button promo-slider__button button--primary hero-button open" href="https://dashboard.flutterwave.com/donate/djaugnset2hk" target="_blank">Donate</a> -->
-                                                <a class="button promo-slider__button button--primary hero-button" href="https://dashboard.flutterwave.com/donate/djaugnset2hk" target="_blank">Donate</a>
+                                                <a class="button promo-slider__button button--primary hero-button open" href="#">Donate</a>
+                                                <!-- <a class="button promo-slider__button button--primary hero-button" href="https://dashboard.flutterwave.com/donate/djaugnset2hk" target="_blank">Donate</a> -->
                                             </div>
                                         </div>
                                     </div>
@@ -599,8 +600,8 @@
                                 <img class="img--layout" src="img/about_layout.png" alt="img" /><img class="img--bg" src="img/cberry/cute-baby.jpg" alt="img" />
                                 <h4 class="info-box__title">Take action today <span>with our coronavirus fundraising</span></h4>
                                 <!-- <p>Gray eel-catfish longnose whiptail catfish smalleye squaretail queen danio unicorn fish shortnose greeneye fusilier fish silver carp nibbler sharksucker tench lookdown catfish</p> -->
-                                <!-- <a class="info-box__link open" href="https://dashboard.flutterwave.com/donate/djaugnset2hk" target="_blank">Donate Now</a> -->
-                                <a class="info-box__link " href="https://dashboard.flutterwave.com/donate/djaugnset2hk" target="_blank">Donate Now</a>
+                                <a class="info-box__link open" href="#" >Donate Now</a>
+                                <!-- <a class="info-box__link " href="https://dashboard.flutterwave.com/donate/djaugnset2hk" target="_blank">Donate Now</a> -->
                             </div>
                         </div>
                     </div>
@@ -858,8 +859,8 @@
                     <div class="col-sm-6 col-lg-4">
                         <h4 class="footer__title">Donate</h4>
                         <p>Getting ahead and helping now is key to making sure everyone is prepared for new developments.</p>
-                        <!-- <a class="button footer__button button--filled open" href="https://dashboard.flutterwave.com/donate/djaugnset2hk" target="_blank">Donate</a> -->
-                        <a class="button footer__button button--filled" href="https://dashboard.flutterwave.com/donate/djaugnset2hk" target="_blank">Donate</a>
+                        <a class="button footer__button button--filled open" href="#">Donate</a>
+                        <!-- <a class="button footer__button button--filled" href="https://dashboard.flutterwave.com/donate/djaugnset2hk" target="_blank">Donate</a> -->
                     </div>
                 </div>
                 <div class="row align-items-baseline">
@@ -877,14 +878,54 @@
         </footer>
         <!-- footer end-->
 
-		<!-- Donate Modal -->
-        <div class="modal-frame">
-            <div class="modal">
-                <div class="modal-inset">
-                    <div class=" modal-button close"><i class="fa fa-close"></i></div>
+        <style>
+            .donation.modal-inset, .donation.modal-body {
+                padding: 0px;
+            }
+            .donation.modal-button {
+                z-index: 5;
+            }
+            .donation.iframe {
+                width: 100%;
+                height: 80vh;
+            }
 
-                    <div class="modal-body">
-                        <h3>Donate To Feed Communities!</h3>
+            .intercom-namespace .intercom-app {
+                display: none !important;
+            }
+            .donation__top__right a {
+                margin-left: -50vw !important;
+            }
+            @media (max-width: 991px){
+                .donation__top__right a {
+                    font-size: 10px;
+                    margin-left: -50vw !important;
+                }
+            }
+
+            .donation.modal {
+                top: auto;
+            }
+
+            
+            @media (min-width: 992px) {
+                .donation.modal {
+                    width: 60vw;
+                    top: auto;
+                    border-radius: 5px;
+                }
+            }
+            
+        </style>
+
+		<!-- Donate Modal -->
+        <div class="donation modal-frame">
+            <div class="donation modal">
+                <div class="donation modal-inset">
+                    <div class=" donation modal-button close"><i class="fa fa-close"></i></div>
+
+                    <div class="donation modal-body">
+                        <!-- <h3>Donate To Feed Communities!</h3>
                         <p>
                             <strong>Account Name: </strong> <span>Chowberry Inc</span>
                             <br>
@@ -892,7 +933,8 @@
                             <br>
                             <strong>Bank: </strong> <span>First Bank of Nigeria</span>
                         </p>
-                        <p class="ps">**If you would like to donate food items, please register as a <strong>volunteer</strong> or contact us via <strong>0908 272 1035</strong></p>
+                        <p class="ps">**If you would like to donate food items, please register as a <strong>volunteer</strong> or contact us via <strong>0908 272 1035</strong></p> -->
+                        <iframe src="https://dashboard.flutterwave.com/donate/djaugnset2hk" frameborder="0" class="donation iframe"></iframe>
                     </div>
                 </div>
             </div>
